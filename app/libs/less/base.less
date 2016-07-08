@@ -1,0 +1,99 @@
+/*
+ * @名称：base.less
+ * @功能：1、重设浏览器默认样式
+ *       2、设置通用原子类
+ */
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* 去掉 table cell 的边距并让其边重合 */
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* ie bug：th 不继承 text-align */
+th {
+  text-align:inherit;
+}
+
+/* 去除默认边框 */
+fieldset,img {
+  border:none;
+}
+
+/* 一致的 del 样式 */
+del {
+  text-decoration:line-through;
+}
+
+/* 去掉列表前的标识，li 会继承 */
+ol,ul {
+  list-style:none;
+}
+
+/* 来自yahoo，让标题都自定义，适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:500;
+}
+
+/* 统一上标和下标 */
+sub,sup {
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline;
+}
+sup {
+  top:-0.5em;
+}
+sub {
+  bottom:-0.25em;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+  text-decoration:none;
+}
+
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+  overflow:hidden;
+}
+.clear {
+  clear:both;
+  display:block;
+  font-size:0;
+  height:0;
+  line-height:0;
+  overflow:hidden;
+}
+
+/* 设置显示和隐藏，通常用来与 js 配合 */
+.hide {
+  display:none;
+}
+.block {
+  display:block;
+}
+
+/* 设置浮动，减少浮动带来的 bug */
+.fl,.fr {
+  display:inline;
+}
+.fl {
+  float:left;
+}
+.fr {
+  float:right;
+}
